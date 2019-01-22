@@ -23,10 +23,10 @@ def main():
     # -------------------------------------------------------------------------
    # draw_circles(rg.Point(100, 50))
     #draw_circles(rg.Point(-200, 0))
-    better_draw_circles(rg.Point(100,50),50)
-    better_draw_circles(rg.Point(-50, 100),40)
-    #even_better_draw_circles(rg.Point(0,0),50,5,'blue',5)
-   # even_better_draw_circles(rg.Point(-50,-60),15,20,'red',2)
+    #better_draw_circles(rg.Point(100,50),50)
+    #better_draw_circles(rg.Point(-50, 100),40)
+    even_better_draw_circles(rg.Point(0,0),50,5,'blue',5)
+    even_better_draw_circles(rg.Point(-50,-60),15,20,'red',2)
     window.update()
     window.close_on_mouse_click()
 
@@ -141,7 +141,7 @@ def better_draw_circles(point, d_radius):
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(15)
+        turtle.forward(d_radius)
         turtle.left(90)
 
         turtle.pen_down()
@@ -149,7 +149,7 @@ def better_draw_circles(point, d_radius):
 
 
 ###############################################################################
-# TODO: 4a.
+# done: 4a.
 #   In the previous _TODO_, you made a MORE POWERFUL version
 #   of   draw_circles   by introducing a new PARAMETER for the amount
 #   by which the radii of the concentric circles increase.
@@ -171,7 +171,7 @@ def better_draw_circles(point, d_radius):
 #   to the body of the   even_better_draw_circles   function defined below.
 #   Then add parameters and modify the code to make them work!
 #
-# TODO: 4b.
+# done: 4b.
 #   In   main  at the place indicated, comment-out the existing calls
 #   to  better_draw_circles  and add at least two calls to the improved
 #   even_better_draw_circles  function, to TEST that your modified code is
@@ -182,11 +182,16 @@ def better_draw_circles(point, d_radius):
 def even_better_draw_circles(point,d_radius,circles,color,thickness):
     turt = rg.SimpleTurtle()
     turt.pen = rg.Pen(color,thickness)
+    turt.pen_up()
     turt.go_to(point)
 
     for k in range(1,circles):
-        #turt.right(90)
+        turt.pen_up()
+        turt.right(90)
+        turt.forward(d_radius)
+        turt.left(90)
 
+        turt.pen_down()
         turt.draw_circle(d_radius * k)
 
     """ An improved version of draw_circles, per the _TODO_ above. """

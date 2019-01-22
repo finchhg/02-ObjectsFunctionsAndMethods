@@ -21,10 +21,10 @@ def main():
     # comment-out the following two statements and replace them
     # by calls to   better_draw_circles   et al as needed.
     # -------------------------------------------------------------------------
-   # draw_circles(rg.Point(100, 50))
-    #draw_circles(rg.Point(-200, 0))
-    #better_draw_circles(rg.Point(100,50),50)
-    #better_draw_circles(rg.Point(-50, 100),40)
+    draw_circles(rg.Point(100, 50))
+    draw_circles(rg.Point(-200, 0))
+    better_draw_circles(rg.Point(100,50),50)
+    better_draw_circles(rg.Point(-50, 100),40)
     even_better_draw_circles(rg.Point(0,0),50,5,'blue',5)
     even_better_draw_circles(rg.Point(-50,-60),15,20,'red',2)
     window.update()

@@ -23,6 +23,8 @@ import rosegraphics as rg
 def main():
     i=hypotenuse(3,4)
     print(i)
+    draw('green',5)
+    draw('blue',20)
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -38,7 +40,7 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# done: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
@@ -51,7 +53,7 @@ def hypotenuse(a,b):
 
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# done: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -73,10 +75,20 @@ def hypotenuse(a,b):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# done: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+
+def draw(color, thickness):
+    window = rg.TurtleWindow()
+    greg = rg.SimpleTurtle()
+    greg.pen = rg.Pen(color,3)
+    greg.forward(100)
+    joe = rg.SimpleTurtle()
+    joe.pen = rg.Pen('red',thickness)
+    joe.backward(100)
+    window.close_on_mouse_click()
 
 
 ###############################################################################

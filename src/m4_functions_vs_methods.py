@@ -98,7 +98,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
         my_turtle.left(twist)
 
 ###############################################################################
-# TODO: 3.
+# done: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -142,7 +142,7 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # done: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
 
@@ -151,6 +151,19 @@ def try_methods():
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
 def try_functions():
+    joe = rg.SimpleTurtle()
+    joe.pen = rg.Pen('green',5)
+    joe.go_to(rg.Point(200,100))
+    joe.go_to(rg.Point(300,30))
+    jim = rg.SimpleTurtle()
+    jim.pen = rg.Pen('blue',5)
+    jim.go_to(rg.Point(100,200))
+    jim.go_to(rg.Point(0,0))
+    bill = rg.SimpleTurtle()
+    bill.pen = rg.Pen('red',5)
+    bill.go_to(rg.Point(-50,50))
+    bill.go_to(rg.Point(100,100))
+
     """
     Causes several SimpleTurtles to do the following:
      -- One jumps to (200, 100), then moves (while drawing) to (300, 30)

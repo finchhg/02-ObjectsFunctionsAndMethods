@@ -25,6 +25,8 @@ def main():
     #draw_circles(rg.Point(-200, 0))
     better_draw_circles(rg.Point(100,50),50)
     better_draw_circles(rg.Point(-50, 100),40)
+    #even_better_draw_circles(rg.Point(0,0),50,5,'blue',5)
+   # even_better_draw_circles(rg.Point(-50,-60),15,20,'red',2)
     window.update()
     window.close_on_mouse_click()
 
@@ -177,17 +179,15 @@ def better_draw_circles(point, d_radius):
 #
 ###############################################################################
 
-def even_better_draw_circles(point,radius,circles,color,thickness):
+def even_better_draw_circles(point,d_radius,circles,color,thickness):
     turt = rg.SimpleTurtle()
     turt.pen = rg.Pen(color,thickness)
     turt.go_to(point)
 
-    for k in range(1,20):
-        turt.down(50)
-        turt.forward(20)
-        turt.right(30)
+    for k in range(1,circles):
+        #turt.right(90)
 
-        turt.draw_circle(radius * circles)
+        turt.draw_circle(d_radius * k)
 
     """ An improved version of draw_circles, per the _TODO_ above. """
     # READ the above _TODO_ and then copy-paste code from better_circles here:

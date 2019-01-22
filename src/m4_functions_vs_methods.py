@@ -153,15 +153,21 @@ def try_methods():
 def try_functions():
     joe = rg.SimpleTurtle()
     joe.pen = rg.Pen('green',5)
+    joe.pen_up()
     joe.go_to(rg.Point(200,100))
+    joe.pen_down()
     joe.go_to(rg.Point(300,30))
     jim = rg.SimpleTurtle()
     jim.pen = rg.Pen('blue',5)
+    jim.pen_up()
     jim.go_to(rg.Point(100,200))
+    jim.pen_down()
     jim.go_to(rg.Point(0,0))
     bill = rg.SimpleTurtle()
     bill.pen = rg.Pen('red',5)
+    bill.pen_up()
     bill.go_to(rg.Point(-50,50))
+    bill.pen_down()
     bill.go_to(rg.Point(100,100))
 
     """
@@ -171,7 +177,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # done: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -185,6 +191,27 @@ def try_functions():
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
 def try_methods_and_functions():
+    bob = rg.SimpleTurtle()
+    bob.pen = rg.Pen('blue',5)
+    bob.backward(150)
+    bob.speed = 1
+    for k in range(2):
+        bob.draw_square(100)
+        bob.left(30)
+    bob.speed = 5
+    bob.pen = rg.Pen('red',5)
+    for w in range(10):
+        bob.draw_square(50)
+        bob.left(15)
+    bob.speed = 100
+    bob.pen = rg.Pen('red',35)
+    for w in range(8):
+        bob.draw_square(300)
+        bob.left(60)
+    bob.pen = rg.Pen('black',3)
+    bob.backward(200)
+    bob.draw_circle(30)
+    bob.draw_square(50)
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
@@ -217,7 +244,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 6. Implement and test this function, per its doc-string above.
+    # done: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
